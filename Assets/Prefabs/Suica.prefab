@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3997159408899228722}
   - component: {fileID: 3997159408899228721}
   - component: {fileID: 3997159408899228720}
-  - component: {fileID: 3997159408899228724}
+  - component: {fileID: 2175015308052625252}
   m_Layer: 0
   m_Name: Suica
-  m_TagString: Untagged
+  m_TagString: Suica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3997159408899228724
+--- !u!114 &2175015308052625252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3997159408899228735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0435e38435d7c43aead83d3f0d04ab, type: 3}
+  m_Script: {fileID: 11500000, guid: dad3c574959a0d544823e5c2aa5a0e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cam: {fileID: 2255166485019800735, guid: 4764ce9fdf60ccc45932983ee52d7b0f, type: 3}

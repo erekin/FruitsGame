@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MainManager : MonoBehaviour
 {
@@ -27,11 +28,25 @@ public class MainManager : MonoBehaviour
         firstPos = basePos.transform.position;
         if (!firstFruits)
         {
-            int fruitsNum = Random.Range(0, 4);
+            int fruitsNum = UnityEngine.Random.Range(0, 4);
             generateFruits = fruits[fruitsNum];
         }
         Instantiate(generateFruits, firstPos, Quaternion.identity);
 
         firstFruits = false;
+    }
+
+    private GameObject changeObj;
+    private void ChangeFruits(int id,GameObject obj)
+    {
+        id++;
+        changeObj = fruits[id];
+        Instantiate(changeObj, obj.transform.position, Quaternion.identity);
+    }
+
+    public void TouchFruits(int id,GameObject obj)
+    {
+        ChangeFruits(id,obj);
+        Destroy(obj);
     }
 }

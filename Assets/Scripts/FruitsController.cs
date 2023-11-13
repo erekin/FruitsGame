@@ -5,11 +5,12 @@ using UnityEngine;
 public class FruitsController : MonoBehaviour
 {
     [SerializeField] Camera _cam;
-    [SerializeField] MainManager mainManager;
+    public MainManager mainManager;
 
     private Vector3 offset;
     private float yPos_fixed;   //yç¿ïWÇå≈íË
     private Rigidbody2D rb;
+    private int id;
 
     private void Start()
     {
@@ -33,6 +34,11 @@ public class FruitsController : MonoBehaviour
         transform.position = pos;
     }
 
+    private Vector3 GetMousePos()
+    {
+        return _cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
     private void OnMouseUp()
     {
         rb.gravityScale = 2;
@@ -44,8 +50,11 @@ public class FruitsController : MonoBehaviour
         mainManager.FruitsGenerate();
     }
 
-    private Vector3 GetMousePos()
+    private  void OnCollisionEnter2D(Collision2D collision)
     {
-        return _cam.ScreenToWorldPoint(Input.mousePosition);
+        if(collision.gameObject.CompareTag("blank"))
+        {
+            mainManager.TouchFruits(id,this.gameObject);
+        }
     }
 }
