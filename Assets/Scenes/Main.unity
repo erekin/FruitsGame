@@ -944,6 +944,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+      propertyPath: fruits.Array.data[0]
+      value: 
+      objectReference: {fileID: 1884209770954915488, guid: d7a6937ceee278542a695f428846a73a, type: 3}
+    - target: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+      propertyPath: fruits.Array.data[1]
+      value: 
+      objectReference: {fileID: 7995706960457916806, guid: c268e9fd459943c459803398e01e477d, type: 3}
+    - target: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+      propertyPath: fruits.Array.data[2]
+      value: 
+      objectReference: {fileID: 2300987321393307709, guid: 49c5cec546d281349bf98bea37b5846a, type: 3}
+    - target: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+      propertyPath: fruits.Array.data[3]
+      value: 
+      objectReference: {fileID: 3997159408899228735, guid: bc147f563ed115f4fae02620c66fed36, type: 3}
+    - target: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+      propertyPath: fruits.Array.data[4]
+      value: 
+      objectReference: {fileID: 6234659675746093222, guid: a2b41796e15a42e4b8942d0cc4d6b450, type: 3}
     - target: {fileID: 6696951975424925145, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
       propertyPath: m_RootOrder
       value: 2
