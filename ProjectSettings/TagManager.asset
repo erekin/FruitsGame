@@ -9,6 +9,7 @@ TagManager:
   - bell
   - Suica
   - Cherry
+  - fruits
   layers:
   - Default
   - TransparentFX

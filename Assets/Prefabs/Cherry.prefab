@@ -13,14 +13,14 @@ GameObject:
   - component: {fileID: 6234659675746093224}
   - component: {fileID: 6234659675746093225}
   - component: {fileID: 6234659675746093229}
-  - component: {fileID: 2043988118662853036}
+  - component: {fileID: 6155018250294143789}
   m_Layer: 0
   m_Name: Cherry
-  m_TagString: Cherry
+  m_TagString: fruits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6234659675746093226
 Transform:
   m_ObjectHideFlags: 0
@@ -139,7 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cam: {fileID: 2255166485019800735, guid: 4764ce9fdf60ccc45932983ee52d7b0f, type: 3}
   mainManager: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
---- !u!114 &2043988118662853036
+  id: 0
+--- !u!114 &6155018250294143789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,8 +149,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6234659675746093222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271b74bb085058b4bb8a0c442e0e9427, type: 3}
+  m_Script: {fileID: 11500000, guid: ef0435e38435d7c43aead83d3f0d04ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cam: {fileID: 2255166485019800735, guid: 4764ce9fdf60ccc45932983ee52d7b0f, type: 3}
   mainManager: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+  id: 0

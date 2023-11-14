@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CherryController : FruitsController
 {
-    public int CherryID = 4;
+    //public int CherryID = 4;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Cherry"))
-        {
-            mainManager.TouchFruits(CherryID, this.gameObject);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Cherry"))
+    //    {
+    //        mainManager.TouchFruits(CherryID, this.gameObject);
+    //    }
+    //}
 
 }

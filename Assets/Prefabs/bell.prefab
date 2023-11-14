@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 2300987321393307696}
   - component: {fileID: 2300987321393307699}
   - component: {fileID: 2300987321393307698}
-  - component: {fileID: 4573077852520142503}
+  - component: {fileID: 3118670115337108266}
   m_Layer: 0
   m_Name: bell
-  m_TagString: bell
+  m_TagString: fruits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2300987321393307697
 Transform:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4573077852520142503
+--- !u!114 &3118670115337108266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,8 +133,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2300987321393307709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d54354628c45794f84d490255004f48, type: 3}
+  m_Script: {fileID: 11500000, guid: ef0435e38435d7c43aead83d3f0d04ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _cam: {fileID: 2255166485019800735, guid: 4764ce9fdf60ccc45932983ee52d7b0f, type: 3}
   mainManager: {fileID: 6696951975424925144, guid: c26093f4ab84f9449929bd60824b3dc3, type: 3}
+  id: 0

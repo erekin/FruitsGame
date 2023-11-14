@@ -76,10 +76,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9faa88d9e6cfd4da9292462d993f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basePos: {fileID: 6696951974716754354}
+  basePos: {x: 0, y: 0}
+  firstPos: {fileID: 6696951974716754355}
   fruits:
-  - {fileID: 1884209770954915488, guid: d7a6937ceee278542a695f428846a73a, type: 3}
-  - {fileID: 7995706960457916806, guid: c268e9fd459943c459803398e01e477d, type: 3}
-  - {fileID: 2300987321393307709, guid: 49c5cec546d281349bf98bea37b5846a, type: 3}
-  - {fileID: 3997159408899228735, guid: bc147f563ed115f4fae02620c66fed36, type: 3}
-  - {fileID: 6234659675746093222, guid: a2b41796e15a42e4b8942d0cc4d6b450, type: 3}
+  - {fileID: 8061207729288575360, guid: d7a6937ceee278542a695f428846a73a, type: 3}
+  - {fileID: 8946971510673816608, guid: c268e9fd459943c459803398e01e477d, type: 3}
+  - {fileID: 3118670115337108266, guid: 49c5cec546d281349bf98bea37b5846a, type: 3}
+  - {fileID: 8204071272340005912, guid: bc147f563ed115f4fae02620c66fed36, type: 3}
+  - {fileID: 6234659675746093229, guid: a2b41796e15a42e4b8942d0cc4d6b450, type: 3}

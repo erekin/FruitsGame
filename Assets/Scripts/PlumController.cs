@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlumController : FruitsController
 {
-    public int plumID = 1;
+    //public int plumID = 1;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("plum"))
-        {
-            mainManager.TouchFruits(plumID, this.gameObject);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("plum"))
+    //    {
+    //        mainManager.TouchFruits(plumID, this.gameObject);
+    //    }
+    //}
 }

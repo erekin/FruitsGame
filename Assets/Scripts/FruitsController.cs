@@ -10,7 +10,7 @@ public class FruitsController : MonoBehaviour
     private Vector3 offset;
     private float yPos_fixed;   //yç¿ïWÇå≈íË
     private Rigidbody2D rb;
-    private int id;
+    public int id;
 
     private void Start()
     {
@@ -50,11 +50,29 @@ public class FruitsController : MonoBehaviour
         mainManager.FruitsGenerate();
     }
 
+    private bool isMerge = false;
     private  void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("blank"))
+        GameObject colObj = collision.gameObject;
+
+        if (colObj.gameObject.CompareTag("fruits"))
         {
-            mainManager.TouchFruits(id,this.gameObject);
+            FruitsController colFruits = collision.gameObject.GetComponent<FruitsController>();
+            if (id == colFruits.id &&
+                     !isMerge &&
+                     !colFruits.isMerge &&
+                     id < mainManager.MaxFruitsNo - 1){
+                isMerge = true;
+                colFruits.isMerge = true;
+                mainManager.MergeNext(transform.position, id);
+                Destroy(gameObject);
+                Destroy(colFruits.gameObject);
+            }
         }
+
+        //if(collision.gameObject.CompareTag("blank"))
+        //{
+        //    mainManager.TouchFruits(id,this.gameObject);
+        //}
     }
 }
