@@ -34,6 +34,14 @@ public class MainManager : MonoBehaviour
 
     public void MergeFruits(FruitsController colfruits, int id)
     {
-        Debug.Log(colfruits.name + ":" + id);
+        if(id < 4)
+        {
+            id++;
+            Debug.Log(fruits[id].name + "出現！");
+        }
+        else
+        {
+            Debug.Log("スイカはまだ");
+        }
     }
 }
