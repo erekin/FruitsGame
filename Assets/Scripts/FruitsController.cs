@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class FruitsController : MonoBehaviour
     private float yPos_fixed;   //y座標を固定
     private Rigidbody2D rb;
     public bool isMerge;
+    public int fruitsID;
+    public string ownName;
 
     private void Start()
     {
@@ -18,6 +21,9 @@ public class FruitsController : MonoBehaviour
         yPos_fixed = gameObject.transform.position.y;
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        ownName = gameObject.name;
+        ownName = ownName.Substring(0,ownName.Length-"(clone)".Length);
+        fruitsID = GetIndex();
     }
 
     private void OnMouseDrag()
@@ -48,10 +54,44 @@ public class FruitsController : MonoBehaviour
             FruitsController colFruits = collision.gameObject.GetComponent<FruitsController>();
             if(gameObject.name == colFruits.name && !isMerge && !colFruits.isMerge)
             {
-                Debug.Log("マージ！！");
+                mainManager.MergeFruits(colFruits,fruitsID);
+                isMerge = true;
+                colFruits.isMerge = true;
+                Destroy(gameObject);
+                Destroy(colFruits.gameObject);
             }
-            isMerge = true;
-            colFruits.isMerge = true;
         }
+    }
+
+    private int GetIndex()
+    {      
+        int index = 0;
+        switch(ownName)
+        {
+            case  "blank":
+                index = 0;
+                break;
+
+            case "plum":
+                index = 1;
+                break;
+
+            case "bell":
+                index = 2;
+                break;
+
+            case "Suica":
+                index = 3;
+                break;
+
+            case "Cherry":
+                index = 4;
+                break;
+
+            default:
+                index = 999;
+                break;
+        }
+        return index;
     }
 }

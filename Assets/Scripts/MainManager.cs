@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,7 @@ public class MainManager : MonoBehaviour
     {
         if (!firstFruits)
         {
-            int i = Random.Range(0, MaxFruitsNo -1);
+            int i = UnityEngine.Random.Range(0, MaxFruitsNo -1);
             generateFruits = fruits[i];
         }
         
@@ -31,4 +32,8 @@ public class MainManager : MonoBehaviour
         firstFruits = false;
     }
 
+    public void MergeFruits(FruitsController colfruits, int id)
+    {
+        Debug.Log(colfruits.name + ":" + id);
+    }
 }
