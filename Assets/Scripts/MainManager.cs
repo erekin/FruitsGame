@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MainManager : MonoBehaviour
     private bool firstFruits;
     private GameObject generateFruits;
     private int MaxFruitsNo;
+    public bool gravityFlag;
 
     void Start()
     {
@@ -30,6 +32,7 @@ public class MainManager : MonoBehaviour
         
         Instantiate(generateFruits, (Vector2)basePos.position,Quaternion.identity);
         firstFruits = false;
+        gravityFlag= false;
     }
 
     public void MergeFruits(FruitsController colfruits, int id)
@@ -37,11 +40,13 @@ public class MainManager : MonoBehaviour
         if(id < 4)
         {
             id++;
-            Debug.Log(fruits[id].name + "出現！");
+            Instantiate(fruits[id], colfruits.transform.position, Quaternion.identity);
+            gravityFlag= true;
         }
-        else
-        {
-            Debug.Log("スイカはまだ");
-        }
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene("Main"); 
     }
 }

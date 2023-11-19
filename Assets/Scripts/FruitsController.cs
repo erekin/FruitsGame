@@ -20,7 +20,16 @@ public class FruitsController : MonoBehaviour
         //yç¿ïWÇå≈íË
         yPos_fixed = gameObject.transform.position.y;
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;
+
+        if (!mainManager.gravityFlag)
+        {
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 1;
+        }
+
         ownName = gameObject.name;
         ownName = ownName.Substring(0,ownName.Length-"(clone)".Length);
         fruitsID = GetIndex();
@@ -57,8 +66,7 @@ public class FruitsController : MonoBehaviour
                 mainManager.MergeFruits(colFruits,fruitsID);
                 isMerge = true;
                 colFruits.isMerge = true;
-                Destroy(gameObject);
-                Destroy(colFruits.gameObject);
+                StartCoroutine(DestroyObj(colFruits.gameObject));
             }
         }
     }
@@ -93,5 +101,13 @@ public class FruitsController : MonoBehaviour
                 break;
         }
         return index;
+    }
+
+    IEnumerator DestroyObj(GameObject colObj)
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        Destroy(gameObject);
+        Destroy(colObj.gameObject);
     }
 }
